@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body style="background-image: linear-gradient(to left, rgb(153, 183, 233), rgb(215, 184, 250)); text-align: center; margin-top: 300px">
+
+<button style="font-size: 20px; background-color: #ffffff; padding: 14px 40px; border-radius: 8px;" id="invite">Invite Session</button>
+
+<audio id="remote"></audio>
+<video id="remote-video" autoplay></video>
+<video id="local-video" autoplay muted></video>
+
+<button style="font-size: 20px; background-color: #ffffff; padding: 14px 40px; border-radius: 8px;" id="volume-up">Raise Volume</button>
+<button style="font-size: 20px; background-color: #ffffff; padding: 14px 40px; border-radius: 8px;" id="volume-down">Lower Volume</button>
+<button style="font-size: 20px; background-color: #ffffff; padding: 14px 40px; border-radius: 8px;" id="mute" class="off">Mute</button>
+<button style="font-size: 20px; background-color: #ffffff; padding: 14px 40px; border-radius: 8px;" id="video" class="off">Video</button>
+
+<script src="http://sipjs.com/download/sip-0.13.5.js"></script>
+<script src="audio.js"></script>
+
+
+<script>
+  if (window.location.hash === '#dev') {
+    var i = 1;
+    window.setInterval(function () { console.log(i); i++; }, 950);
+    window.setTimeout(function () { window.location.reload(); }, 10000);
+  }
+</script>
+</body>
+</html>

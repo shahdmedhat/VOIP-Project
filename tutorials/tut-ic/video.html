@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body style="background-image: linear-gradient(to left, rgb(153, 183, 233), rgb(215, 184, 250)); text-align: center; margin-top: 275px; margin-left: 600px;">
+
+<!-- 2. Add Identity -->
+<!-- <form id="identity">
+  <input type="text" id="address" />
+  <input type="password" id="password" />
+  <button id="auth">Authenticate</button>
+</form> -->
+
+<!-- 1. Add destination -->
+  <input style="font-size: 20px; background-color: #ffffff; padding: 14px 40px; border-radius: 8px" type="text" id="destination"/>
+  <button style="font-size: 20px; background-color: #ffffff; padding: 14px 40px; border-radius: 8px; margin-right: 100px;" id="invite">Invite Session</button>
+  <!-- 4. Video-->
+
+  <!-- <button style="font-size: 20px; background-color: #ffffff; padding: 14px 40px; border-radius: 8px;" id="volume-up">Raise Volume</button>
+  <button style="font-size: 20px; background-color: #ffffff; padding: 14px 40px; border-radius: 8px;" id="volume-down">Lower Volume</button>
+  <button style="font-size: 20px; background-color: #ffffff; padding: 14px 40px; border-radius: 8px;" id="mute" class="off">Mute</button> -->
+
+
+  <video id="remote"></video>
+  <video id="remoteVideo" autoplay></video>
+  <video id="localVideo" autoplay muted></video>
+  
+<script src="http://sipjs.com/download/sip-0.13.5.js"></script>
+<script src="video.js"></script>
+
+<script>
+  if (window.location.hash === '#dev') {
+    var i = 1;
+    window.setInterval(function () { console.log(i); i++; }, 950);
+    window.setTimeout(function () { window.location.reload(); }, 10000);
+  }
+</script>
+</body>
+</html>
